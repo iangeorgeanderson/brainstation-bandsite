@@ -1,0 +1,21 @@
+$black:#323232;
+
+.navbar{
+
+    &__list{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        list-style: none;
+    }
+}
+
+.section-one{
+    background-image: url('/Assignment3/Assets/Images/Album-hero.jpg');
+    background-size: cover;
+    
+    &__text{
+        color:red;
+    }
+}
