@@ -138,6 +138,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 1rem;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
