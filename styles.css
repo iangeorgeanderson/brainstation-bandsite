@@ -127,7 +127,6 @@ header {
 }
 
 .navbar__biography, .navbar__shows {
-  color: #ffffff;
   width: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,8 +136,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 1rem;
   text-decoration: none;
+  padding-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -168,6 +167,16 @@ header {
     -ms-flex-item-align: center;
         align-self: center;
   }
+}
+
+.navbar__biography--link {
+  padding-top: 0;
+  color: #ffffff;
+}
+
+.navbar__shows--link {
+  padding-top: 0;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {

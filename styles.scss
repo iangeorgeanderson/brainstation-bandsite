@@ -110,13 +110,12 @@ header{
     list-style: none;
     display:flex;
     &__biography, &__shows{
-        color:$white;
         width:10rem;
         display:flex;
         align-content: center;
         justify-content: center;
-        padding-top:1rem;
         text-decoration:none;
+        padding-top:1rem;
         @media (min-width:$tablet){
             display:inline-flex;
             padding:0;
@@ -130,6 +129,14 @@ header{
             justify-content: center;
             align-self: center;
         }
+    }
+    &__biography--link{
+        padding-top:0;
+        color:$white;
+    }
+    &__shows--link{
+        padding-top:0;
+        color:$white;
     }
     @media (min-width:$tablet){
         display:inline-flex;
