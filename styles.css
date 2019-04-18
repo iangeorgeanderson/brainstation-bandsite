@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'avenir regular';
-  src: url("../brainstation-bandsite/Assets/Fonts/Linotype-AvenirNextLTPro.ttf");
+  src: url("Assets/Fonts/Linotype-AvenirNextLTPro.ttf");
 }
 
 @font-face {
   font-family: 'avenir demi bold';
-  src: url("../brainstation-bandsite/Assets/Fonts/Linotype-AvenirNextLTProDemi.ttf");
+  src: url("Assets/Fonts/Linotype-AvenirNextLTProDemi.ttf");
 }
 
 @font-face {
   font-family: 'avenir bold';
-  src: url("../brainstation-bandsite/Assets/Fonts/Linotype-AvenirNextLTProBold.ttf");
+  src: url("Assets/Fonts/Linotype-AvenirNextLTProBold.ttf");
 }
 
 * {
@@ -210,7 +210,7 @@ header {
 .section-one {
   width: 100%;
   height: 11.4375rem;
-  background-image: url("../brainstation-bandsite/Assets/Images/Album-hero.jpg");
+  background-image: url("Assets/Images/Album-hero.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
