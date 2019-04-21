@@ -16,7 +16,6 @@
 * {
   margin: 0;
   max-width: 100vw;
-  font-family: 'avenir regular';
 }
 
 ul, p {
@@ -38,8 +37,8 @@ h1 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
 }
 
@@ -150,6 +149,7 @@ h5 {
           justify-content: center;
   text-decoration: none;
   padding-top: 1rem;
+  font-family: 'avenir regular';
 }
 
 @media (min-width: 768px) {
@@ -272,6 +272,8 @@ h5 {
   .section-one__title {
     padding-top: 6rem;
     padding-bottom: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -279,6 +281,10 @@ h5 {
   .section-one__title {
     padding: 10rem 0rem 3rem 0rem;
   }
+}
+
+.section-one__featured--text {
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -298,10 +304,6 @@ h5 {
   .section-one__featured {
     width: 50%;
   }
-}
-
-.section-one__featured--text {
-  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -328,6 +330,20 @@ h5 {
 .section-two__title {
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-two__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-family: 'avenir bold';
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two__title {
+    margin-top: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -361,6 +377,19 @@ h5 {
   font-family: 'avenir demi bold';
 }
 
+@media (min-width: 768px) {
+  .section-two__show--date-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two__show--date-name {
+    margin-bottom: 0rem;
+  }
+}
+
 .section-two__show--venue-name {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
@@ -368,11 +397,37 @@ h5 {
   color: #323232;
 }
 
+@media (min-width: 768px) {
+  .section-two__show--venue-name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two__show--venue-name {
+    margin-bottom: 0rem;
+  }
+}
+
 .section-two__show--location-name {
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-family: 'avenir regular';
   color: #323232;
+}
+
+@media (min-width: 768px) {
+  .section-two__show--location-name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two__show--location-name {
+    margin-bottom: 0rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -394,6 +449,12 @@ h5 {
   }
 }
 
+@media (min-width: 1440px) {
+  .section-two__show {
+    margin-bottom: 1rem;
+  }
+}
+
 .section-two__divider {
   width: 18rem;
   height: 0.0625rem;
@@ -405,6 +466,12 @@ h5 {
   .section-two__divider {
     width: 45rem;
     margin: 0rem 0rem 1.5rem 0rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two__divider {
+    width: 50.25rem;
   }
 }
 
@@ -422,20 +489,43 @@ h5 {
 
 @media (min-width: 768px) {
   .section-two__buy-tickets {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two__content-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 3rem;
+    width: 50.25rem;
   }
 }
 
 @media (min-width: 768px) {
   .section-two {
     padding: 0rem 1.5rem 0rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0rem 11.25rem 0rem;
   }
 }
 
@@ -446,6 +536,7 @@ h5 {
 
 .section-three__getintouch {
   color: #ffffff;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 

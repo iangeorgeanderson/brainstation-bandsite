@@ -117,6 +117,7 @@ header{
         justify-content: center;
         text-decoration:none;
         padding-top:1rem;
+        font-family:'avenir regular';
         @media (min-width:$tablet){
             display:inline-flex;
             padding:0;
@@ -154,6 +155,7 @@ header{
 }
 
 .section-one{
+    z-index:1;
     max-width:100vw;
     height:11.4375rem;
     background-image: url('../Assets/Images/Album-hero.jpg');
@@ -176,7 +178,7 @@ header{
         }
     }
     &__overlay{
-        z-index: 999999999;
+        z-index: 2;
         width:100vw;
         position:absolute;
         height:11.4375rem;
@@ -336,7 +338,7 @@ header{
     padding-top:2rem;
  
     &__title{
-        margin:0rem 0rem 1.5rem 0rem;
+        margin:0rem 0rem 1.5rem 1rem;
         @media (min-width:$tablet){
             padding-left:1.5rem;
             margin-bottom:3rem;
@@ -352,7 +354,7 @@ header{
         width:100%;
         display:flex;
         flex-direction:column;
-        padding:0rem 0rem 1rem;
+        padding:0rem 0rem 1.5rem;
         @media (min-width:$tablet){
             flex-direction:row;
             flex-wrap:wrap;
@@ -382,12 +384,177 @@ header{
 }
 
 .section-five{
+    padding:0rem 1rem 1rem 1rem;
+    &__title{
+        margin: 2rem 0rem 2.5rem 0rem;
+        @media(min-width:$desktop){
+            margin:3rem 0rem 3.5rem 0rem;
+        }
+    }
+    &__content-container{
+        @media(min-width:$desktop){
+            display: flex;
+            flex-direction: column;
+            margin:0rem 17.25rem 0rem 17.25rem;
+        }
+    }
+    &__comment-container{
+        display:flex;
+        justify-content: space-between;
+        @media(min-width:$tablet){
+            margin:0rem 6.25rem;
+        }
+        @media(min-width:$desktop){
+            width: 33rem;
+            justify-self:center;
+            margin:0rem 0rem;
+        }
+    }
+    &__comment-picture{
+        background-image: url('../Assets/Images/Mohan-muruge.jpg');
+        background-size: cover;
+        width:2.5rem;
+        height:2.5rem;
+        border-radius: 50%;
+        margin-top:1.1rem;
+        @media(min-width:$desktop){
+            margin-top:1.6rem;
+            width:3rem;
+            height:3rem;
+        }
+    }
+    &__new-comment{
+        width:14rem;
+        &--name, &--comment{
+            color:$silver;
+            @media(min-width:$desktop){
+                padding-bottom:0.5rem;
+            }
+        }
+        &--name-field{
+            height:2.5rem;
+            background-color:$alabaster;
+            border:solid $black 0.0625rem;
+            border-radius:0.25rem;
+            margin-bottom:1.5rem;
+            @media(min-width:$desktop){
+                width:28.75rem;
+                height:3rem;
+            }
+        }
+        &--comment-field{
+            height:5rem;
+            background-color:$alabaster;
+            border:solid $mercury 0.0625rem;
+            border-radius:0.25rem;
+            margin-bottom:1.5rem;
+            @media(min-width:$desktop){
+                width:28.75rem;
+                height:6rem;
+            }
+        }
+        &--button{
+            height:2.5rem;
+            width:14rem;
+            border-radius:0.25rem;
+            margin-bottom: 0.5rem;
+            padding:0;
+            background-color:$black;
+            @media(min-width:$tablet){
+                position:relative;
+                float:right;
+            }
+            @media(min-width:$desktop){
+                width:10rem;
+                height:3rem;
+                margin-bottom:0;
+            }
+        }
+        &--button-text{
+            color:$white;
+            font-family:'avenir demi bold';
+        }
+        @media(min-width:$tablet){
+            flex-grow:2;
+            padding-left:1.5rem;
+        }
+        @media(min-width:$desktop){
+            padding-left:1.25rem;
+        }
+    }
+    &__old-comment-credentials{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media(min-width:$tablet){
+            justify-content:left;
+        }
+    }
+    &__old-comment-picture{
+        background-color:$mercury;
+        width:2.5rem;
+        height:2.5rem;
+        border-radius: 50%;
+    }
+    &__old-comment{
+        width:14rem;
+        &--name{
+            border-radius:0.25rem;
+            margin-bottom:1rem;
+            font-family:'avenir bold';
+            color:$black;
+        }
+        &--date{
+            color:$silver;
+            @media(min-width:$tablet){
+             margin-left:1rem;   
+            }
+        }
+        &--comment{
+            border-radius:0.25rem;
+            font-family:'avenir regular';
+            color:$black;
+        }
+        @media(min-width:$tablet){
+            flex-grow:2;
+            padding-left:1.5rem;       
+        }
+        @media(min-width:$desktop){
+            padding-left:1rem;
+        }
+    }
+    &__divider{
+        height:0.0625rem;
+        width:18rem;
+        background-color:$mercury;
+        margin:1.5rem 0rem 1.5rem;
+        @media(min-width:$tablet){
+            width:32.5rem;       
+            margin:1.5rem 6.25rem;
+        }
+        @media(min-width:$desktop){
+            width:33rem;
+            margin:1.5rem 0rem;
+
+        }
+    }
+    @media(min-width:$tablet){
+        padding:0rem 1.5rem 1rem 1.5rem;
+    }
+    @media(min-width:$desktop){
+        padding:0rem 11.25rem 1rem 11.25rem;
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+.section-six{
     padding:2.5rem 1rem 2.5rem 1rem;
     background-color:$black;
     &__getintouch{
         color:$white;
-        margin-bottom:2.0rem;
         font-size:2rem;
+        margin-bottom:2rem;
         @media (min-width:$tablet){
         font-size: 2.25rem;
         line-height: 2.75rem;
@@ -397,26 +564,25 @@ header{
         }
     }
     &__icons{
-        margin-bottom:2.0rem;
+        margin-bottom:2rem;
         &--instagram, &--facebook, &--twitter{
             text-decoration: none;
             color:$white;
-            margin-right:1.5rem;
-            @media (min-width:$desktop){
+            margin-right:2rem;
+            @media (min-width:$tablet){
+                display:flex;
                 margin-right:2rem;
+                align-items:bottom;
             }
         }
-    }
-    &__logo{
-        display:none;
         @media(min-width:$tablet){
-            display:inline-block;
+            flex-grow:2;
+            display:flex;
+            align-items: center;
+            margin-left:5rem;
         }
         @media(min-width:$desktop){
-            display:inline-flex;
-            width:7.5rem;
-            height:1.5rem;
-            justify-content: center;
+            margin-bottom:3.5rem
         }
     }
     &__link-container{
@@ -433,6 +599,18 @@ header{
             justify-content: space-between;
             padding:0;
             margin:0rem 11.25rem;
+        }
+    }
+    &__logo{
+        display:none;
+        @media(min-width:$tablet){
+            display:inline-flex;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        @media(min-width:$desktop){
+            display:inline-flex;
+            margin-bottom:3.5rem;
         }
     }
     &__contact{
@@ -486,6 +664,7 @@ header{
             padding:0rem 0.5rem 0rem;
         }
         @media (min-width:$desktop){
+            width:53.5%;
             display:flex;
             flex-direction:row;
             justify-content: space-between;
