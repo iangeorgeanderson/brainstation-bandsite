@@ -1,20 +1,21 @@
 @font-face {
   font-family: 'avenir regular';
-  src: url("Assets/Fonts/Linotype-AvenirNextLTPro.ttf");
+  src: url("../Assets/Fonts/Linotype-AvenirNextLTPro.ttf");
 }
 
 @font-face {
   font-family: 'avenir demi bold';
-  src: url("Assets/Fonts/Linotype-AvenirNextLTProDemi.ttf");
+  src: url("../Assets/Fonts/Linotype-AvenirNextLTProDemi.ttf");
 }
 
 @font-face {
   font-family: 'avenir bold';
-  src: url("Assets/Fonts/Linotype-AvenirNextLTProBold.ttf");
+  src: url("../Assets/Fonts/Linotype-AvenirNextLTProBold.ttf");
 }
 
 * {
   margin: 0;
+  max-width: 100vw;
 }
 
 ul, p {
@@ -51,7 +52,7 @@ h4 {
 }
 
 html, body {
-  widows: 100vw;
+  max-width: 100vw;
   margin: 0;
 }
 
@@ -208,9 +209,9 @@ header {
 }
 
 .section-one {
-  width: 100%;
+  max-width: 100vw;
   height: 11.4375rem;
-  background-image: url("Assets/Images/Album-hero.jpg");
+  background-image: url("../Assets/Images/Album-hero.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,7 +226,7 @@ header {
 }
 
 .section-one__name {
-  z-index: 99999999;
+  z-index: 3;
   margin-left: 1rem;
   color: #ffffff;
 }
@@ -246,7 +247,7 @@ header {
 }
 
 .section-one__overlay {
-  z-index: 2;
+  z-index: 999999999;
   width: 100vw;
   position: absolute;
   height: 11.4375rem;
@@ -491,12 +492,12 @@ header {
 }
 
 .section-four__title {
-  margin: 0rem 0rem 1.5rem 1rem;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 
 @media (min-width: 768px) {
   .section-four__title {
-    padding-left: 0.5rem;
+    padding-left: 1.5rem;
     margin-bottom: 3rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -605,7 +606,7 @@ header {
 
 @media (min-width: 1440px) {
   .section-five__icons--instagram, .section-five__icons--facebook, .section-five__icons--twitter {
-    margin-right: 32px;
+    margin-right: 2rem;
   }
 }
 
@@ -774,6 +775,12 @@ header {
     padding-left: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-five__legal--copyright {
+    padding-left: 0rem;
   }
 }
 
