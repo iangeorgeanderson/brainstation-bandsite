@@ -28,18 +28,19 @@ commentArray.push(comment3);
 
 console.log(commentArray);
 
-commentForm.onsubmit = (event) => {
+commentForm.addEventListener('submit', function() {
     event.preventDefault();
 
-    
     var commName = event.target.commName.value;
     var commComment = event.target.commComment.value;
     var commDate = new Date();
 
-    console.log(`${commName}`);
-    console.log(`${commComment}`);
-    console.log(`${commDate}`);
+    function newComment(){
+        commName = event.target.commName.value;
+        commComment = event.target.commComment.value;
+        commDate = new Date();
+    }
+    commentArray.push(newComment);
 
     console.log(commentArray);
-
-}
+});
