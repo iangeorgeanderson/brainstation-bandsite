@@ -43,4 +43,5 @@ commentForm.addEventListener('submit', function() {
     commentArray.push(newComment);
 
     console.log(commentArray);
+    commentForm.reset();
 });
