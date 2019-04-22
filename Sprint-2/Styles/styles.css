@@ -43,7 +43,7 @@ h3 {
   font-family: 'avenir demi bold';
 }
 
-h4 {
+h4, label {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: 'avenir regular';
@@ -634,7 +634,7 @@ header {
 
 @media (min-width: 1440px) {
   .section-five__comment-picture {
-    margin-top: 1.6rem;
+    margin-top: 1.5rem;
     width: 3rem;
     height: 3rem;
   }
@@ -660,6 +660,13 @@ header {
   border: solid #323232 0.0625rem;
   border-radius: 0.25rem;
   margin-bottom: 1.5rem;
+  width: 14rem;
+}
+
+@media (min-width: 768px) {
+  .section-five__new-comment--name-field {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -675,6 +682,13 @@ header {
   border: solid #e1e1e1 0.0625rem;
   border-radius: 0.25rem;
   margin-bottom: 1.5rem;
+  width: 14rem;
+}
+
+@media (min-width: 768px) {
+  .section-five__new-comment--comment-field {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1440px) {

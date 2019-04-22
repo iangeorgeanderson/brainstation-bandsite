@@ -55,7 +55,7 @@ h3{
     line-height: 1.125rem;
     font-family:'avenir demi bold';
 }
-h4{
+h4, label{
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-family:'avenir regular';
@@ -418,7 +418,7 @@ header{
         border-radius: 50%;
         margin-top:1.1rem;
         @media(min-width:$desktop){
-            margin-top:1.6rem;
+            margin-top:1.5rem;
             width:3rem;
             height:3rem;
         }
@@ -437,6 +437,10 @@ header{
             border:solid $black 0.0625rem;
             border-radius:0.25rem;
             margin-bottom:1.5rem;
+            width:14rem;
+            @media(min-width:$tablet){
+                width:100%;
+            }
             @media(min-width:$desktop){
                 width:28.75rem;
                 height:3rem;
@@ -448,6 +452,10 @@ header{
             border:solid $mercury 0.0625rem;
             border-radius:0.25rem;
             margin-bottom:1.5rem;
+            width:14rem;
+            @media(min-width:$tablet){
+                width:100%;
+            }
             @media(min-width:$desktop){
                 width:28.75rem;
                 height:6rem;

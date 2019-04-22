@@ -64,21 +64,19 @@
             <div class="section-five__comment-container">
                 <div class="section-five__comment-picture"></div>
                 <div class="section-five__new-comment">
-                    <h3 class="section-five__new-comment--name">
-                        NAME
-                    </h3>
-                    <h4 class="section-five__new-comment--name-field">
-
-                    </h4>
-                    <h3 class="section-five__new-comment--comment">
-                        COMMENT
-                    </h3>
-                    <h4 class="section-five__new-comment--comment-field">
-
-                    </h4>
-                    <button class="section-five__new-comment--button">
-                        <h3 class="section-five__new-comment--button-text">BUY TICKETS</h3>
-                    </button>
+                    <form id="commentForm">
+                        <label class="section-five__new-comment--name">
+                            NAME
+                        </label>
+                        <input type="commName" class="section-five__new-comment--name-field" name="commName">
+                        <label class="section-five__new-comment--comment">
+                            COMMENT
+                        </label>
+                        <input type="commComment" class="section-five__new-comment--comment-field" name="commComment">
+                        <button class="section-five__new-comment--button">
+                            <h3 class="section-five__new-comment--button-text">COMMENT</h3>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="section-five__divider"></div>
@@ -186,5 +184,6 @@
             <h4 class="section-six__legal--rights">All Rights Reserved</h4>
         </div>
     </section>
+    <script src="./Scripts/index.js"></script>
 </body>
 </html>
