@@ -292,6 +292,11 @@ h5{
                 margin-bottom:0rem;
             }
         }
+        &--toggled-show-label{
+            @media(min-width:$desktop){
+                display:none;
+            }
+        }
         @media (min-width:$tablet){
             display:flex;
             flex-direction:row;

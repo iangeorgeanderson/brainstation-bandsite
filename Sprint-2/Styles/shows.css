@@ -430,6 +430,12 @@ h5 {
   }
 }
 
+@media (min-width: 1440px) {
+  .section-two__show--toggled-show-label {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .section-two__show {
     display: -webkit-box;

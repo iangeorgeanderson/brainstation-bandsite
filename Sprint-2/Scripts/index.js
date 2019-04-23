@@ -31,17 +31,70 @@ console.log(commentArray);
 commentForm.addEventListener('submit', function() {
     event.preventDefault();
 
-    var commName = event.target.commName.value;
-    var commComment = event.target.commComment.value;
-    var commDate = new Date();
+    var name = event.target.commName.value;
+    var comment = event.target.commComment.value;
+    var date = new Date();
 
-    function newComment(){
-        commName = event.target.commName.value;
-        commComment = event.target.commComment.value;
-        commDate = new Date();
+    var newComment = {
+        name: event.target.commName.value,
+        date: new Date(),
+        comment: event.target.commComment.value
     }
     commentArray.push(newComment);
 
     console.log(commentArray);
     commentForm.reset();
+    
+    var elim = document.getElementById("allComments");
+    elim.parentNode.removeChild(elim);
 });
+
+function createComment(comment){
+    var commentContainer = document.createElement("div");
+    commentContainer.classList.add("section-five__comment-container");
+    
+    var commentPicture = document.createElement("div");
+    commentPicture.classList.add("section-five__old-comment-picture");
+
+    commentContainer.appendChild(commentPicture);
+
+    var comment = document.createElement("div");
+    comment.classList.add("section-five__old-comment");
+
+    commentContainer.appendChild(comment);
+
+    var commentCredentials = document.createElement("div");
+    commentCredentials.classList.add("section-five__old-comment-credentials");
+
+    comment.appendChild(commentCredentials);
+
+    var commentName = document.createElement("h3");
+    commentName.classList.add("section-five__old-comment--name");
+
+    commentCredentials.appendChild(commentName);
+
+    var commentDate = document.createElement("h4");
+    commentDate.classList.add("section-five__old-comment--date");
+
+    commentCredentials.appendChild(commentDate);
+
+    var commentText = document.createElement("h4");
+    commentText.classList.add("section-five__old-comment--comment");
+    
+    comment.appendChild(commentText);
+
+    var commentDivider = document.createElement("div");
+    commentDivider.classList.add("section-five__divider");
+}
+
+var arrayLength = commentArray.length;
+for (var i = 0; i < arrayLength; i++) {
+    createComment()
+    
+    var newName = document.querySelector(".section-five__new-comment--name-field").value
+    document.getElementById("nameField").innerHTML = newName
+
+    var newComment = document.querySelector(".section-five__new-comment--comment-field").value
+    document.getElementById("commField").innerHTML = newComment;
+};
+
