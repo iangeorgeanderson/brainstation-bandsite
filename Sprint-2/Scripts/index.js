@@ -31,10 +31,6 @@ console.log(commentArray);
 commentForm.addEventListener('submit', function() {
     event.preventDefault();
 
-    var name = event.target.commName.value;
-    var comment = event.target.commComment.value;
-    var date = new Date();
-
     var newComment = {
         name: event.target.commName.value,
         date: new Date(),
@@ -45,13 +41,29 @@ commentForm.addEventListener('submit', function() {
     console.log(commentArray);
     commentForm.reset();
     
-    var elim = document.getElementById("allComments");
-    elim.parentNode.removeChild(elim);
+    var parent = document.querySelector(".section-five__all-comments")
+    var elim = document.querySelectorAll("section-five__comment-container")
+    parent.remove(elim);
+
+    var arrayLength = commentArray.length;
+    for (var i = 0; i < arrayLength; i++) {
+    createComment(commentArray[i])
+    }
 });
 
-function createComment(comment){
+function createComment(){
+
+    document.getElementById("allCommentsWrapper");
+   
+    var allComments = document.createElement("div");
+    allComments.classList.add("section-five__all-comments");
+
+    allCommentsWrapper.appendChild(allComments);
+    
     var commentContainer = document.createElement("div");
     commentContainer.classList.add("section-five__comment-container");
+
+    allComments.appendChild(commentContainer);
     
     var commentPicture = document.createElement("div");
     commentPicture.classList.add("section-five__old-comment-picture");
@@ -72,11 +84,13 @@ function createComment(comment){
     commentName.classList.add("section-five__old-comment--name");
 
     commentCredentials.appendChild(commentName);
+    commentName.innerHTML = nameField;
 
     var commentDate = document.createElement("h4");
     commentDate.classList.add("section-five__old-comment--date");
-
+    commentDate.innerHTML = 
     commentCredentials.appendChild(commentDate);
+    commentDate.innerHTML = commField;
 
     var commentText = document.createElement("h4");
     commentText.classList.add("section-five__old-comment--comment");
@@ -86,15 +100,3 @@ function createComment(comment){
     var commentDivider = document.createElement("div");
     commentDivider.classList.add("section-five__divider");
 }
-
-var arrayLength = commentArray.length;
-for (var i = 0; i < arrayLength; i++) {
-    createComment()
-    
-    var newName = document.querySelector(".section-five__new-comment--name-field").value
-    document.getElementById("nameField").innerHTML = newName
-
-    var newComment = document.querySelector(".section-five__new-comment--comment-field").value
-    document.getElementById("commField").innerHTML = newComment;
-};
-
