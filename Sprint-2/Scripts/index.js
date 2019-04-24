@@ -41,7 +41,7 @@ commentForm.addEventListener('submit', function() {
     console.log(commentArray);
     commentForm.reset();
     
-    var parent = document.querySelector(".section-five__all-comments")
+    var parent = document.getElementById("allComments")
     var elim = document.querySelectorAll("section-five__comment-container")
     parent.remove(elim);
 
@@ -88,9 +88,8 @@ function createComment(){
 
     var commentDate = document.createElement("h4");
     commentDate.classList.add("section-five__old-comment--date");
-    commentDate.innerHTML = 
+    
     commentCredentials.appendChild(commentDate);
-    commentDate.innerHTML = commField;
 
     var commentText = document.createElement("h4");
     commentText.classList.add("section-five__old-comment--comment");
