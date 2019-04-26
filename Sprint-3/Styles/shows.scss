@@ -1,0 +1,507 @@
+//variables--------------------------------------------
+
+$black:#323232;
+$white:#ffffff;
+$alabaster:#fafafa;
+$mercury:#e1e1e1;
+$silver:#afafaf;
+
+$iphone:320px;
+$tablet:768px;
+$desktop: 1440px;
+
+//font-mixins
+
+@font-face {
+    font-family: 'avenir regular';
+    src: url('../Assets/Fonts/Linotype-AvenirNextLTPro.ttf');
+}
+@font-face {
+    font-family: 'avenir demi bold';
+    src: url('../Assets/Fonts/Linotype-AvenirNextLTProDemi.ttf');
+}
+@font-face {
+    font-family: 'avenir bold';
+    src: url('../Assets/Fonts/Linotype-AvenirNextLTProBold.ttf');
+}
+
+//styles
+
+*{
+    margin:0;
+    max-width:100vw;
+}
+
+ul, p{
+    padding:0;
+    margin:0;
+    color:$black;
+}
+
+html, body{
+    max-width:100vw;
+    margin:0;
+}
+
+h1{
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: 'avenir bold';
+    @media(min-width:$tablet){
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+h2{
+    font-family:'avenir bold';
+}
+
+h3{
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family:'avenir bold';
+}
+h4{
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-family:'avenir regular';
+    color:$silver;
+    font-weight:normal;
+}
+
+h5{
+    font-size:0.75rem;
+    line-height: 1.25rem;
+    color:$silver;
+}
+
+.banner{
+    height:5rem;
+    background-color:#323232;
+    &__logo{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        padding-top:1rem;
+        color:$white;
+        @media (min-width:$tablet){
+            width:15%;
+            margin-left:1.5rem;
+            padding-top:0;
+            display:inline-flex;
+            align-self:center;            
+        }
+        @media (min-width:$desktop){
+            width:unset;
+            margin-left:11.25rem;
+            padding-top:0;
+            display:inline-flex;
+            justify-content: left;
+            align-self:center;            
+        }
+    }
+    @media (min-width:$tablet){
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        align-content: center;
+
+    }
+}
+
+.navbar{
+    width:100%;
+    list-style: none;
+    display:flex;
+    &__biography, &__shows{
+        width:10rem;
+        display:flex;
+        align-content: center;
+        justify-content: center;
+        text-decoration:none;
+        padding-top:1rem;
+        font-family:'avenir regular';
+        @media (min-width:$tablet){
+            display:inline-flex;
+            padding:0;
+            justify-content: center;
+            align-self: center;
+        }
+        @media (min-width:$desktop){
+            width:5rem;
+            display:inline-flex;
+            margin:0 0 0 3.5rem;
+            justify-content: center;
+            align-self: center;
+        }
+    }
+    &__biography--link{
+        padding-top:0;
+        color:$white;
+    }
+    &__shows--link{
+        padding-top:0;
+        color:$white;
+    }
+    @media (min-width:$tablet){
+        display:inline-flex;
+        padding:0;
+        width:40%;
+        align-content: center;
+        justify-content:center;
+    }
+    @media (min-width:$desktop){
+        display:inline-flex;
+        justify-content: left;
+        align-content: center;
+    }
+}
+
+.section-one{
+    background-image: url('../Assets/Images/shows_main-img.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:29.5rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    &__container{
+        @media(min-width:$desktop){
+            display:flex;
+            justify-content: space-between;
+
+        }
+    }
+    &__iframe-container{
+        width:18rem;
+        height:7.1875rem;
+        border-radius: 0.25rem;
+        overflow: hidden;
+        padding-top: 4rem;
+        @media (min-width:$tablet){
+            width:60%;
+        }
+        @media (min-width:$desktop){
+            width:27.25rem;
+            height:9.125rem;
+            padding-top:2.25rem;
+        }
+    }
+    &__title{
+        padding-top:4rem;
+        color:$white;
+        font-family: 'avenir demi bold';
+        @media(min-width:$tablet){
+            padding-top:6rem;
+            padding-bottom:2.5rem;
+            font-size:1.5rem;
+            line-height: 2rem;
+        }
+        @media(min-width:$desktop){
+            padding: 10rem 0rem 3rem 0rem;
+        }
+    }
+    &__featured{
+        &--text{
+            color:$white;
+        }
+        @media(min-width:$tablet){
+            display:flex;
+            flex-direction:column;
+            width:75vw;
+        }
+        @media(min-width:$desktop){
+            width:50%;
+        }
+    }
+
+    @media (min-width: $tablet){
+        height:41.875rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+    @media (min-width: $desktop){
+        height:41.875rem;
+        padding-left:10rem;
+        padding-right:10rem;
+    }
+}
+
+.section-two{
+    padding: 0rem 1rem 0.5rem 1rem;
+    background-color:$white;
+    &__title{
+        margin-top:2rem;
+        margin-bottom:2.5rem;
+        @media(min-width:$tablet){
+            font-size: 36px;
+            line-height: 44px;
+            font-family: 'avenir bold';
+        }
+        @media(min-width:$desktop){
+        margin-top: 3rem;
+        }
+    }
+    &__show-container{
+        @media(min-width: $tablet){
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+    }
+    &__show{
+        display:flex;
+        flex-direction:column;
+        &--date-name{
+            margin-top:1rem;
+            margin-bottom:1.5rem;
+            font-family: 'avenir demi bold';
+            @media(min-width:$tablet){
+                font-size: 16px;
+                line-height: 24px;
+            }
+            @media(min-width:$desktop){
+                margin-bottom:0rem;
+            }
+        }
+        &--venue-name{
+            margin-top:1rem;
+            margin-bottom:1.5rem;
+            font-family: 'avenir regular';
+            color:$black;
+            @media(min-width:$tablet){
+                font-size: 0.875rem;
+                line-height:1.375rem;
+            }
+            @media(min-width:$desktop){
+                margin-bottom:0rem;
+            }
+        }
+        &--location-name{
+            margin-top:1rem;
+            margin-bottom:2rem;
+            font-family: 'avenir regular';
+            color:$black;
+            @media(min-width:$tablet){
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            }
+            @media(min-width:$desktop){
+                margin-bottom:0rem;
+            }
+        }
+        &--toggled-show-label{
+            @media(min-width:$desktop){
+                display:none;
+            }
+        }
+        @media (min-width:$tablet){
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            flex-grow: 2;
+            padding-right:3.125rem;
+        }
+        @media(min-width:$desktop){
+            margin-bottom:1rem;
+        }
+    }
+    &__divider{
+        width:18rem;
+        height:0.0625rem;
+        background-color:$mercury;
+        margin:1rem 0rem 1.5rem 0rem;
+        @media(min-width: $tablet){
+            width:45rem;
+            margin:0rem 0rem 1.5rem 0rem;
+        }
+        @media(min-width:$desktop){
+            width:50.25rem;
+        }
+    }
+    &__buy-tickets{
+        width:18rem;
+        height:3rem;
+        border-radius: 0.25rem;
+        background-color: $black;
+        &--text{
+            color:$white;
+            font-family:'avenir demi bold';
+        }
+        @media(min-width: $tablet){
+            align-self:center;
+            width:10rem;
+        }
+    }
+    &__content-container{
+        @media(min-width:$desktop){
+            flex-direction:column;
+            margin-top:3rem;
+            width:50.25rem;
+        }
+    }
+    @media (min-width:$tablet){
+        padding:0rem 1.5rem 0rem 1.5rem;
+    }
+    @media (min-width:$desktop){
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        margin:0rem 11.25rem 0rem;
+    }
+}
+
+.section-three{
+    padding:2.5rem 1rem 2.5rem 1rem;
+    background-color:$black;
+    &__getintouch{
+        color:$white;
+        font-size:2rem;
+        margin-bottom:2rem;
+        @media (min-width:$tablet){
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        }
+        @media (min-width:$desktop){
+            margin-bottom:3.5rem;
+        }
+    }
+    &__icons{
+        margin-bottom:2rem;
+        &--instagram, &--facebook, &--twitter{
+            text-decoration: none;
+            color:$white;
+            margin-right:2rem;
+            @media (min-width:$tablet){
+                display:flex;
+                margin-right:2rem;
+                align-items:bottom;
+            }
+        }
+        @media(min-width:$tablet){
+            flex-grow:2;
+            display:flex;
+            align-items: center;
+            margin-left:5rem;
+        }
+        @media(min-width:$desktop){
+            margin-bottom:3.5rem
+        }
+    }
+    &__link-container{
+        display:inline-block;
+        @media(min-width:$tablet){
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            padding:0.5rem;
+        }
+        @media (min-width:$desktop){
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            padding:0;
+            margin:0rem 11.25rem;
+        }
+    }
+    &__logo{
+        display:none;
+        @media(min-width:$tablet){
+            display:inline-flex;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        @media(min-width:$desktop){
+            display:inline-flex;
+            margin-bottom:3.5rem;
+        }
+    }
+    &__contact{
+        &--name{
+            color:$white;
+            font-family: 'avenir regular';
+            @media (min-width:$tablet){
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }        
+        &--company{
+            margin-bottom:1.5rem;
+            color:$white;
+            font-family: 'avenir regular';
+            @media (min-width:$tablet){
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+        &--address-one{
+            margin-bottom:0rem;
+            @media (min-width:$tablet){
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+        &--address-two{
+            margin-bottom:1.5rem;
+            @media (min-width:$tablet){
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+        &--email{
+            margin-bottom:2rem;
+            @media (min-width:$tablet){
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+            @media(min-width:$desktop){
+                margin-bottom:2.5rem;
+            }
+        }
+    }
+    &__contact-container{
+        @media (min-width:$tablet){
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            padding:0rem 0.5rem 0rem;
+        }
+        @media (min-width:$desktop){
+            width:53.5%;
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            padding:0rem 11.25rem 0rem;
+        }
+    }
+    &__legal{
+        &--copyright, &--rights{
+            color:$silver;
+            @media (min-width:$tablet){
+                padding-left:0.5rem;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+        &--copyright{
+            @media (min-width:$tablet){
+                padding-left:0rem;
+            }
+        }
+        @media (min-width:$tablet){
+            display:flex;
+            flex-direction:row;
+            padding-left:0.5rem;
+        }
+        @media (min-width:$desktop){
+            display:flex;
+            flex-direction:row;
+            padding-left:11.25rem;
+        }
+    }
+    @media (min-width:$desktop){
+        padding:3rem 0rem;
+    }
+}
