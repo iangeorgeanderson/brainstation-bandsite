@@ -1,6 +1,8 @@
 const url = "https://project-1-api.herokuapp.com/?api_key=";
 const apiKey = "5d3f6448-e9d0-43f9-b9ba-53ff05ab10c0";
 
+
+//get request for comments section
 const promise = axios.get("https://project-1-api.herokuapp.com/comments/?api_key=5d3f6448-e9d0-43f9-b9ba-53ff05ab10c0");
 
 promise.then(response => {
@@ -65,7 +67,6 @@ document.addEventListener('submit', function() {
     //parent.remove(elim);
     elim.forEach(element => {
         element.remove()
-
     })
 
     var arrayLength = commentArray.length;
