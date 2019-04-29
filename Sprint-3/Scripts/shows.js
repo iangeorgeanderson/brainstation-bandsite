@@ -1,7 +1,5 @@
 axios.get("https://project-1-api.herokuapp.com/showdates/?api_key=5d3f6448-e9d0-43f9-b9ba-53ff05ab10c0")
     .then(response =>{
-        console.table(response.data)
-        console.log("API data")
 
         var elim = document.querySelectorAll(".section-two__show-container, .section-two__divider");
         
@@ -102,3 +100,6 @@ axios.get("https://project-1-api.herokuapp.com/showdates/?api_key=5d3f6448-e9d0-
             contentContainer.appendChild(showDivider);
         }
     })
+    .catch(error => {
+        console.log(error);
+    });

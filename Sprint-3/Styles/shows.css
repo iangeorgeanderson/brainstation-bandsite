@@ -365,6 +365,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -375,6 +378,7 @@ h5 {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-family: 'avenir demi bold';
+  width: 6.5625rem;
 }
 
 @media (min-width: 768px) {
@@ -395,6 +399,7 @@ h5 {
   margin-bottom: 1.5rem;
   font-family: 'avenir regular';
   color: #323232;
+  width: 8.75rem;
 }
 
 @media (min-width: 768px) {
@@ -415,6 +420,7 @@ h5 {
   margin-bottom: 2rem;
   font-family: 'avenir regular';
   color: #323232;
+  width: 10rem;
 }
 
 @media (min-width: 768px) {
@@ -533,6 +539,7 @@ h5 {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 0rem 11.25rem 0rem;
+    padding: 0rem;
   }
 }
 
